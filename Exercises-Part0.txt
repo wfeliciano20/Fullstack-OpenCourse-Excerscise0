@@ -1,0 +1,28 @@
+0.4 New Note
+Browser -> Server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+Server -> Browser: HTTP status code 302. 
+Browser -> Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+Server -> Browser: HTML code
+Browser -> Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+Server -> Browser: main.css
+Browser -> Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+Server -> Browser: main.js
+Browser -> Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+Server -> Browser: data.json
+
+
+0.5 SPA
+
+Browser -> Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa 
+Server-> Browser: main.js & basic html skeleton
+
+Note on Browser:
+The Notes page gives some of the responsibility, generating the HTML code for existing notes, to the browser. The browser tackles this task by executing the JavaScript code it fetched from the server. The code fetches the notes from the server as JSON-data and adds HTML elements for displaying the notes to the page using the DOM-API.
+
+Browser -> Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+Server -> Browser: data.json
+
+0.6 new note spa
+
+Browser-> server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+Server -> Browser: HTTP STATUS CODE 201
